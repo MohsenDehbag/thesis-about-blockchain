@@ -1,0 +1,85 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{hyperref}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{res.bib}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RO, LE] {\title}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Mohsen Dehbag}
+\fancyfoot[CO,RE]{Chapter \thechapter}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{mygray}{rgb}{0.8,0.8,0.8}
+\lstset{%
+basicstyle=\ttfamily,
+breaklines = true,
+backgroundcolor=\color{mygray},
+}
+\usepackage{realboxes}
+
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\graphicspath{{images/}}
+%
+\newcommand*{\email}[1]{%
+    \normalsize\href{mailto:#1}{#1}\par
+    }
+
+\title{
+{Creating a cryptoCurrency with blockChain Technology}\\
+{\large Technical and Vocational University (Shahid Shamsipour)}\\
+{\includegraphics[width=150px]{image/shamsi.png}}
+}
+\author{Mohsen Dehbag\\ \email{mohsendehbag@icloud.com}}
+\date{March 2020}
+
+\begin{document}
+
+\maketitle
+
+
+\chapter*{Abstract}
+
+Blockchain  has been the Most influential  technology since the past decade. The firs word that comes to mind after writing about blockchain is bitcoin, although many people still confuse the blockchain technology with the bitcoin it self however, bitcoin and cryptocurrency are just one of the applications  of blockchain.  In addition to decentralizing money and payments, the system can also be sent to other participants on the network for registration, approval and sending of contracts. This technology in our country can bring about major changes due to the pressure of foreign governments, including the possibility of transferring currency to all other countries without the need for sanctions, and it can be used to accelerate, increase security and transparency of transactions within the country. Also used.
+To further introduce Blockchain, it is a decentralized, digital office and database that is used for the secure exchange of information, digital currency, transactions, and transactions. Each member of the network has access to the latest encrypted Office version so that they can approve or send a new transaction. Basically this is a distributed database that holds and grows a block. Completed blocks are added in chronological order. Each block contains a timestamp and the information link pointing to the previous block.\\
+\textbf{Keywords:} Blockchain-Cryptocurrency-Bitcoin
+
+\chapter*{Dedication}
+To Mom and Dad who supported me everyday and moment and myself.
+
+\chapter*{Acknowledgements}
+I want to thank Amir Hossein Aghaie and Ali Reza Rabeyi for their Tremendous amount of help through finishing this project.
+
+
+\newpage
+\Large Created with \LaTeX{}
+\tableofcontents
+
+\chapter{Introduction}
+\input{chapters/cahpter1}
+
+\chapter{A review of related work}
+\input{chapters/chapter2}
+
+\chapter{Development environment configuration method}
+\input{chapters/chapter3}
+
+\chapter{Analysis and design}
+\input{chapters/chapter4}
+
+\chapter{Implementation}
+\input{chapters/chapter5}
+
+\chapter{Conclusion}
+\input{chapters/Conclusion}
+
+\end{document}

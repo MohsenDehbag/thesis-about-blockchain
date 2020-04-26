@@ -1,0 +1,169 @@
+
+\section{Introduction}
+In the beginning of section, we will look at the environments in which this program was developed, then we will introduce the concepts and configurations in this system, the blockchain.
+
+\section{Programs and services used in project construction}
+For the creation of the project we need to have access to several technologies we 
+
+\subsection{Visual studio code}
+Visual Studio Code (or VSCode for short) is one of the most popular code editors created and maintained by Microsoft. VSCode supports a wide range of programming languages, including languages such as Python, PHP, JavaScript, HTML, CSS, ASP.NET, Java, and many other languages. The second and perhaps most important point is that it's free, because it doesn't have the problems of breaking the lock and legal issues, but the obvious feature that makes it even more brilliant is the support for plugins.\textcite{wiki:Visual_Studio_Code}
+
+The different parts of this program are:
+
+\begin{itemize}
+\item Explorer:
+\end{itemize}
+
+This is the structure of your folders and files. Clicking Explorer will open a menu that displays all the files and folders of the current project, and you can create new files or folders using the small icons at the top.
+
+\begin{itemize}
+\item Search section:
+\end{itemize}
+
+This section allows you to search for a specific section of code or replace specific code with other code.
+
+\begin{itemize}
+\item Source Control Management:
+\end{itemize}
+This section is for version control systems such as Git. Systems like Git help you better manage your project source code and prevent unwanted code deletion. They are also an ideal choice for group work on a project.
+
+\begin{itemize}
+\item Debugging section: 
+\end{itemize}
+As its name implies, it is responsible for debugging. Note that depending on the language of your program, you may need plugins to debugging.
+
+\begin{itemize}
+\item Extensions section: 
+\end{itemize}
+This section allows you to search for different plugins and add them to VSCode. These plugins are designed for a variety of purposes, for example: visual beauty and themes, support for frameworks such as React or Vue, increased support for some programming languages such as Python, improved quality of certain parts of VSCode such as debugging, and more.
+
+\subsection{Post Man}
+Postman is an API testing is a type of software testing that involves testing application programming interfaces (APIs) directly and as part of integration testing to determine if they meet expectations for functionality, reliability, performance, and security. Since APIs lack a GUI, API testing is performed at the message layer. API testing is now considered critical for automating testing because APIs now serve as the primary interface to application logic and because GUI tests are difficult to maintain with the short release cycles and frequent changes commonly used with Agile software development and DevOps.\textcite{wiki:API_testing}
+
+One of the reasons for using my post is that it is free, easy to share, and get code output for each of the APIs, which means that anything that can reduce programming and development time is very important. One of these features is Code Snippet, which allows you to have an output in your favorite programming language after scheduling and testing each API. Languages such as JAVA, Csharp, PHP, Python. Also, its multi-platform makes it possible to run and edit on all devices.
+
+\subsection{Python Language}
+Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+
+Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.
+
+Python was conceived in the late 1980s as a successor to the ABC language. Python 2.0, released in 2000, introduced features like list comprehensions and a garbage collection system capable of collecting reference cycles. Python 3.0, released in 2008, was a major revision of the language that is not completely backward-compatible, and much Python 2 code does not run unmodified on Python 3.
+
+The Python 2 language, i.e. Python 2.7.x, was officially discontinued on 1 January 2020 (first planned for 2015) after which security patches and other improvements will not be released for it.With Python 2's end-of-life, only Python 3.5.x and later are supported.
+
+Python interpreters are available for many operating systems. A global community of programmers develops and maintains CPython, an open source reference implementation. A non-profit organization, the Python Software Foundation, manages and directs resources for Python and CPython development.\textcite{python}
+
+The latest version of Python 3.5 was introduced at the time of its development, but due to the support of the Python team, Python 3.8 was also available for use when writing this article.
+Due to the many problems that exist on the Windows operating system, to work with the server and for the Python programming program, after designing the basic parts of this program, it continued to develop with Linux, Arch, but due to the complexity of installing it in this article. The installation of Python on the Linux Ubuntu operating system is described.
+Installing Python using the pacman tool is a very simple process. The following steps are required to install Python on Linux (arch distribution) by the pacman tool.
+\linebreak
+
+% demo using \lstinline and \Colorbox
+\Colorbox{mygray}{\lstinline|sudo pacman|}
+\linebreak
+
+Once the PPA software has been activated, install version three of Python using the following command line:
+\newline
+
+\Colorbox{mygray}{\lstinline|pacman -S python|}
+\linebreak
+
+in the end by typing python3 in terminal you can see if the installation was successful or not.
+
+\subsection{Virtual environments}
+One of the most important methods tested is Python. Whenever you want to start a new Python project, you need to decide which version of Python you want to use. You will also need to choose from some libraries or packages. Of course, another way is not to install these packages on a system level. Because it's possible to always work on different projects that require different versions of Python. At the same time, you may need some special packages that only work with one version of Python and work on other versions. In such cases, we need to create different environments for Python. These environments are called Python Virtual Environments. The virtual environment used in this program will vary depending on what system and how you install Python on the system. However, if you've installed Python 3 using Homebrew, its location on the system will be as follows:
+
+\Colorbox{mygray}{\lstinline|/usr/local/Cellar/python/3.7.2_1/bin|}
+
+
+In this case, you can use the following command to install virtualenv using pip3:
+
+
+\Colorbox{mygray}{\lstinline|pip3 install virtualenv|}
+
+
+Now all the packages are installed and we can start setting up the virtual environment. We must first determine where we want to build our environment and name it. We create our virtual environment in the same directory where we installed it, and name it virtEnv1:
+
+\Colorbox{mygray}{\lstinline|virtualenv -p python3 ~/virtEnv1|}
+
+To enter and activate a virtual environment called my env, we do the following in windows:
+
+\Colorbox{mygray}{\lstinline| cd Documents\SampleENV\Scripts\ , activate.bat|}
+
+and in Linux and macOS venv can be activated by:
+
+\Colorbox{mygray}{\lstinline|cd Documents/SampleENV/ , source bin/activate|}
+
+\textbf{Advantages of Virtualenv:}
+
+It can be easily upgraded using pip and can easily work with different versions of Python. It also supports Python 2.7 and later.
+
+\textbf{Disadvantages of Virtualenv:}
+
+In this virtual environment, the interpreter's binary file is practically copied to a new location and must be read from there. Also, if you want to use it, you have to install it separately and it will not be provided with Python.
+Notice how the prompt of the command line changes as you successfully enter the virtual environment.
+We can now access libraries, pip, site-packages directory, and proprietary commentary in our project. Also, by activating a virtual environment, the executable files related to this environment are placed inside the PATH variable so that they can be easily accessed as if the commands were used.
+In Linux, you can check which python3 and which pip3 to execute by executing commands.
+So, for each project, it is enough to create a virtual environment within the project once by calling virtualenv, and then activate that environment every time you enter the project directory.
+To exit and deactivate the environment, use the following command:
+
+\Colorbox{mygray}{\lstinline|(SampleENV) deactivate|}
+
+\subsection{vue.js}
+Vue.js is an open-source Model–view–viewmodel JavaScript framework for building user interfaces and single-page applications.
+It was created by Evan You, and is maintained by him and the rest of the active core team members coming from various companies such as Netlif and Netguru.\textcite{wiki:Vue.js}
+To install Vivo, you must first install node.js. To do this, you must first install the desired package from the site https://nodejs.org/en/. You can use the following command to install the latest version of Vue CLI: \newline
+
+\Colorbox{mygray}{\lstinline|npm install -g @vue/cli|}\newline
+
+\subsection{Axios}
+Promise based HTTP client for the browser and node.js\textcite{axios}
+
+with this frameWork we can
+\begin{itemize}
+\item Make XMLHttpRequests from the browser
+\item Make http requests from node.js
+\item Supports the Promise API
+\item Intercept request and response
+\item Transform request and response data
+\item Cancel requests
+\item Automatic transforms for JSON data
+\item Client side support for protecting against XSRF
+\end{itemize}
+
+Axios should be installed from YAM repository:
+
+\Colorbox{mygray}{\lstinline|npm install axios --save|}\newline
+
+\subsection{Peer to Peer Network}
+Similar to P2P refers to a specific type of computer network that uses a distributed architecture. This means that all computers or devices that are members of this network share their workload on the network. Computers or devices that are part of a unique network are called peers. Computers within a unique network have no preference over each other and are all equal. Computers within a unique network share resources between each other without the need for a centralized management system.
+Similar networks, while being used to share resources, also help computers and devices provide a specific service in the form of a group or perform a specific task. However, the above networks are mainly used to share files on the Internet. P2P networks are ideal because they allow computers to connect to the network and simultaneously process and receive files. Suppose you open your browser and open a website to download a file. In this case, the site works as a server and your computer receives a file as a client. This is similar to a one-way street. The file you are downloading is a machine that moves from point A (site) to point B (your computer).
+If you download the same file through a similar network, for example through a torrent site as a starting point, the download will be done in different ways. The file is downloaded in the form of bits and sections that are on different computers within a similar network. At the same time, a file may be sent from your computer to the computers that requested the file. This situation is similar to a two-way road.
+Advantages and disadvantages of P2P
+We now turn to the strengths and weaknesses of this architecture.
+
+\textbf{Advantages}:
+
+The peer-to-peer structure provides many benefits. Among the most important advantages of P2P, it can be said that peer-to-peer networks provide much more security than traditional customer-server settings. The distribution of blockchains in a large number of nodes makes them immune to Dos, which affects countless systems.
+Similarly, since a large number of nodes must reach a consensus before data can be added to the blockchain, it is almost impossible for an attacker to change the data. This is especially true for large networks such as Bitcoin. Smaller blocks are more prone to attacks, as one person or group may eventually be able to take control of the majority of nodes (this is known as a 51 percent attack).
+As a result, the peer-to-peer distribution network, coupled with the need for a consensus of the majority, gives the "blockchain" a great deal of resistance to malicious activity. The P2P model is one of the main reasons why bitcoin (and other "blockchains") is able to withstand the Byzantine error.
+In addition to security, the peer-to-peer structure of cryptocurrencies can make them resistant to censorship by central authorities. Unlike standard bank accounts, cryptocurrency wallets cannot be blocked or emptied by governments. This resistance is also created by the efforts of content platforms and the processing of private payments for censorship.
+Some content producers and online traders have chosen to use cryptocurrencies as a way to prevent third parties from blocking their payments. After stating the advantages of P2P, we go to its disadvantages.\pagebreak
+
+\textbf{Disadvantages}:
+
+Despite the many benefits and advantages of P2P, like any other concept, it has its drawbacks and limitations.
+Since the general offices have been redesigned, instead of a central server, they must be updated in all ninety, adding a transaction to blockchain requires enormous processing power. Although this provides a lot of security, it greatly reduces efficiency, and is one of the main barriers to scalability and widespread acceptance.
+However, cryptocurrency developers and developers are looking for alternatives that can be used as a scalability solution. Highlights include the Lightning Network, Plasma Atrium, and the Mimbel Wimble protocol.
+Another limitation of peer-to-peer networking could be related to the attacks that took place at hardfork events. Since most blockchains are decentralized and open source, groups of ninety can freely copy and modify code, break away from the main chain, and create a new parallel network. Hard forks are completely normal in themselves, and there are no threats. However, if certain security issues are not properly addressed, both chains may be at risk of attack.
+In addition, the distributed nature of P2P networks makes them relatively difficult to control and regulate. Several programs and companies have been involved in illegal activities and copyright infringement.
+
+\subsection{CLI Programs}
+
+A command-line interface (CLI) processes commands to a computer program in the form of lines of text. The program which handles the interface is called a command-line interpreter or command-line processor. Operating systems implement a command-line interface in a shell for interactive access to operating system functions or services. Such access was primarily provided to users by computer terminals starting in the mid-1960s, and continued to be used throughout the 1970s and 1980s on VAX/VMS, Unix systems and personal computer systems including DOS, CP/M and Apple DOS.
+
+In computer system configuration, CLI is still widely used. These days, CLI is mostly done by software programmers or system administrators to perform some of their important tasks, otherwise it will take a lot of time and effort if the GUI is running.
+For this project, a node is created with a graphical user interface (GUI) and a command user interface.
+
+\section{Conclusion}
+By using the architectures and technologies mentioned above we get one step closer to completing the program.
